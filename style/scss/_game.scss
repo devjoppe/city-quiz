@@ -1,0 +1,135 @@
+@use 'config';
+
+// Start gamescreen
+.gamescreen {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  margin: 72px 0 32px 0;
+  justify-content: center;
+}
+
+.game-title, .score-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: center;
+}
+
+.game-title {
+  margin-bottom: 8px;
+}
+
+.score-title {
+  margin-bottom: 32px;
+}
+
+.person-image {
+  display: flex;
+  img {
+    width: 350px;
+  }
+}
+
+.game-number-sub {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+// Points
+.questionbar-points {
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  margin:16px 0 16px 0;
+  text-transform: uppercase;
+}
+
+.questionbar-background {
+  display: flex;
+  align-items: center;
+  width: 260px;
+  background: config.$color-white-10;
+}
+
+.question-numbers {
+  background: config.$color-pink;
+  display: flex;
+  height: 36px;
+  box-sizing: border-box;
+  color: config.$color-pink-dark;
+  padding: 0 16px 0 16px;
+  align-items: center;
+}
+
+.points {
+  background: config.$color-pink;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  color: config.$color-pink-dark;
+}
+
+// Form design
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+  width: 0;
+}
+
+.label-answer-unfocused {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: config.$color-white-15;
+  height: 60px;
+  color: config.$color-white-80;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.label-answer {
+  @include config.answer--button;
+  background: config.$color-white-15;
+  color: config.$color-white-80;
+  &:focus-within {
+    background: config.$color-purple !important;
+    color: config.$color-dark-blue !important;
+  }
+  &:hover {
+    border: 1px solid config.$color-white-20;
+  }
+}
+
+.form-buttons {
+  display: flex;
+  margin-top: 16px;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.checkbt {
+  width: 230px;
+}
+
+.nextbt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}

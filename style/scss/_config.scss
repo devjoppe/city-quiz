@@ -1,0 +1,149 @@
+// Import font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+
+// Primary font
+$primary-font: 'Titillium Web', sans-serif;
+
+// Colors
+$color-dark-blue: #0D144B;
+$color-pink: #FF9CC2;
+$color-mint-green: #A2FFFF;
+$color-orange: #FFA2A2;
+$color-purple: #CDAAF5;
+
+// Complementary colors
+$color-pink-dark: #844D62;
+$color-incorrect: #FFA2A2;
+$color-correct: #A2FFBE;
+
+// Colors whites
+$color-white-85: rgba(255, 255, 255, 0.85);
+$color-white-80: rgba(255, 255, 255, 0.8);
+$color-white-20: rgba(255, 255, 255, 0.2);
+$color-white-15: rgba(255, 255, 255, 0.15);
+$color-white-10: rgba(255, 255, 255, 0.1);
+$color-white-5: rgba(255, 255, 255, 0.05);
+
+// Base settings
+body {
+  font-family: $primary-font;
+  background: $color-dark-blue;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  color: #363c83;
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 128px;
+  font-weight: 900;
+  color: $color-mint-green;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: $color-white-80;
+  line-height: 29px;
+  padding: 0;
+  margin: 0;
+}
+
+span {
+  &.bold {
+    font-weight: 700;
+  }
+  &.subtitle {
+    font-size: 56px;
+    font-weight: 900;
+    color: $color-pink;
+    text-transform: uppercase;
+    margin-bottom: 72px;
+    margin-top: -30px;
+    text-shadow: rgba(255,156,194,0.88) 0 0 39px;
+  }
+}
+
+// Mixins
+@mixin answer--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  cursor: pointer;
+  box-sizing: border-box;
+  //background: config.$color-white-15;
+  //color: config.$color-white-80;
+}
+
+// Components
+button {
+  color: $color-dark-blue;
+  font-size: 18px;
+  font-weight: 400;
+  background: $color-mint-green;
+  padding: 16px 0 16px 0;
+  border: none;
+  height: 60px;
+  cursor: pointer;
+  &:hover {
+    background: $color-orange;
+  }
+  &.quit {
+    background: $color-incorrect;
+  }
+}
+
+button:disabled,
+button[disabled]{
+  background-color: $color-white-5;
+  color: $color-white-20;
+  cursor: auto;
+}
+
+// Settings
+.hide {
+  display: none !important;
+}
+
+.color-pink {
+  color: $color-pink;
+}
+
+.bg-correct {
+  background: $color-correct !important;
+  color: #385746 !important;
+}
+
+.bg-incorrect {
+  background: $color-incorrect !important;
+  color: #6e4444 !important;
+}
+
+.bg-correct-button {
+  @include answer--button;
+  background: $color-correct !important;
+  color: #385746 !important;
+}
+
+.bg-incorrect-button {
+  @include answer--button;
+  background: $color-incorrect !important;
+  color: #6e4444 !important;
+}
+

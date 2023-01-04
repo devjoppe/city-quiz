@@ -1,0 +1,51 @@
+@use 'config';
+
+// Start startpage
+.startscreen {
+  display: flex;
+  width: 780px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 128px;
+}
+
+.game-info {
+  display: flex;
+  width: 450px;
+  flex-direction: column;
+}
+
+.game-description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 72px;
+}
+
+.description-title, .game-mode-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.description-text {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.game-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-start-buttons {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  margin-bottom: 32px;
+  button {
+    flex: 1;
+  }
+}

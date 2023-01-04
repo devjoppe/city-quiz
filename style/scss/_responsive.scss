@@ -1,0 +1,59 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .startscreen {
+    margin-top: 72px;
+  }
+
+  .gamescreen {
+    margin-top: 56px;
+  }
+}
+
+  .scorescreen {
+    margin-top: 56px;
+  }
+
+@media screen and (max-width: 767px) {
+  .startscreen {
+    margin-top: 56px;
+  }
+
+  .gamescreen {
+    margin-top: 24px;
+  }
+
+  .scorescreen {
+    margin-top: 24px;
+    width: auto;
+  }
+
+  .game-info {
+    width: auto;
+  }
+
+  .game-mode {
+    margin: 0 56px 0 56px;
+  }
+
+  .game-start-buttons {
+    flex-direction: column;
+  }
+
+  .game-mode-title, .description-title {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  span {
+    &.subtitle {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 56px;
+      margin-top: -10px;
+
+    }
+  }
+}
